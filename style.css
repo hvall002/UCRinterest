@@ -1,0 +1,24 @@
+body{
+    font-family: 'Georgia', serif;
+    color:#3E4349;
+}
+
+#nav {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 10em;
+}
+
+#content {
+    margin-left: 10em;
+}
+
+#tologin {
+    position:absolute;
+    top:0px;
+    right: -35px;
+    width: 25%;
+    max-width: 350px;
+    min-width: 350px;
+}
