@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UCRinterest</title>
+        <link rel = "stylesheet" type="text/css" href="/static/style.css" />
+    </head>
+    <body>
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+        <div id="nav">
+            Navigation:<br>
+            <ul>
+                {% block nav %}{% endblock %}
+                <li><a href="{{url_for('remote')}}"></a></li>
+                <li>Bullet 1</li>
+                <li>Bullet 2</li>
+                <li>Bullet 3</li>
+            </ul>
+        </div>
+        <div id="tologin">
+            {% block tologin %}{% endblock %}
+        </div>
+    </body>
+</html>
