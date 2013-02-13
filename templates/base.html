@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UCRinterest</title>
+        <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}" />
+        <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    </head>
+    <body>
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+        <div id="nav">
+            Navigation:<br>
+            <ul>
+                {% block nav %}{% endblock %}
+                <li><a href="{{url_for('main')}}">Index</a></li>
+                <li><a href="/about/">About</a></li>
+                
+                {% if 'username' in session %}
+                    <li><a href="{{url_for('userProfile')}}">Your Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a>
+                {% else %}
+                    <li><a href="{{url_for('login')}}">Login</a>
+                {% endif %}
+            </ul>
+        </div>
+        <!-- Any page that inherits from this can display flashed messages -->
+        <div id="flashed">
+            {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+                {{message}}
+            {% endfor %}
+            {% endwith %}
+        </div>
+    </body>
+</html>

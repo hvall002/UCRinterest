@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block nav %}
+    {{ super() }}
+{% endblock %}
+
+{% block body %}
+    <h1>UCRinterest!</h1>
+    {% if 'username' in session %}
+        <p>Hi {{session['username']}}, this is the index page.</p>
+        <p>{{title}}</p>
+    {% else %}
+        <p>This is the index page. Log in by clicking on the link to the left.</p>
+        <p>{{title}}</p>
+    {% endif %}
+{% endblock %}

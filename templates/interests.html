@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>Enter 5 interests:</h1>
+    <form action="{{url_for('interests')}}" method="post">
+        <p>Interest #1:
+        <input type="text" name="inter1"/></p>
+        <p>Interest #2:
+        <input type="text" name="inter2"/></p>
+        <p>Interest #3:
+        <input type="text" name="inter3"/></p>
+        <p>Interest #4:
+        <input type="text" name="inter4"/></p>
+        <p>Interest #5:
+        <input type="text" name="inter5"/></p>
+        <p><input type="submit" value="Submit"/></p>
+    </form>
+    
+    <p></p><h2>Current Interests:</h2>
+    <li>{{ session['inter1'] }}</li>
+    <li>{{ session['inter2'] }}</li>
+    <li>{{ session['inter3'] }}</li>
+    <li>{{ session['inter4'] }}</li>
+    <li>{{ session['inter5'] }}</li></p>
+    
+{% endblock %}

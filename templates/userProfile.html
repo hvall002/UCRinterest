@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block nav %}
+    <li><a href="{{url_for('interests')}}">Edit Interests</a>
+{% endblock %}
+
+{% block body %}
+    <h1>Your profile: </h1>
+    <p><li>Username: {{ session['username'] }}</li>
+    <li>Gender: {{ session['gender'] }}</li>
+    <li>Birthday: {{ session['birthday'] }}</li>
+    <h2>Interests:</h2>
+    <li>{{ session['inter1'] }}</li>
+    <li>{{ session['inter2'] }}</li>
+    <li>{{ session['inter3'] }}</li>
+    <li>{{ session['inter4'] }}</li>
+    <li>{{ session['inter5'] }}</li></p>
+{% endblock %}
