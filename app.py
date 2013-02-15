@@ -29,9 +29,9 @@ app.add_url_rule('/interests/',
 app.add_url_rule('/remote/',
                  view_func=Remote.as_view('remote'),
                 methods=['GET', 'POST'])
-#app.add_url_rule('/upload/',
-#                 view_func=Upload.as_view('upload'),
-#                methods=['GET', 'POST'])
+app.add_url_rule('/upload/',
+                 view_func=Upload.as_view('upload'),
+                methods=['GET', 'POST'])
 app.add_url_rule('/userProfile/',
                  view_func=userProfile.as_view('userProfile'),
                 methods=['GET'])
